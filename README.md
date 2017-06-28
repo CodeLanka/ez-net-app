@@ -9,7 +9,7 @@ It contains simple images to assist the user to open a webpage by clicking throu
 
 ### Idea
 We would have a main page with several icons of title type
-e.g. News Papers, TV/Radio, Recipies, Religeous material etc.
+e.g. News Papers, TV/Radio, Recipies, Religious material etc.
 
 When the user clicks one category, webpages related to that category open up. There should be a few notably easy ones to click, and then maybe a "more..." button which shows more links. The idea is to have all as icons with their usual logos.
 
@@ -24,7 +24,7 @@ Therefore we decided we would pitch in and help users to start their internet ex
 ## Why is Codelanka and GDG doing this? Isn't this some company's problem?
 The reasons this project was taken up by codelanka are;
 - If a commercial organization got this project they will try to earn money out of this and display paid ad-type links in the app
-- Even if paid ad-type links are probable, it would be hard for someone to monetize this app, making it nonsensible for a pro-profit venture
+- Even if paid ad-type links are probable, it would be hard for someone to monetize this app, making it nonsensible for a for-profit venture
 - Making the app will help a lot of people
 
 Codelanka's core is to make software which help people but doesn't make any sense when it comes to monetization.
@@ -33,7 +33,7 @@ Codelanka's core is to make software which help people but doesn't make any sens
 Fork, take up an issue, and then work on it. Then create pull requests. The usual deal. We want everyone who are interested to come and pitch in to bring our rural communities to the internet and the possibilities it offer.
 
 ## Uh, wait, this is in React Native! I don't know React Native. (Can't we just use Java and Swift?)
-Fantastic. You're exactly whom we're looking for! Me, the README writer event don't know the language. Isn't it great? You now have a real world problem to solve while learning something new.! You'll be able to learn React Native AND help a lot of people. Wouldn't that be fun?
+Fantastic. You're exactly whom we're looking for! Me, the README writer even don't know the language. Isn't it great? You now have a real world problem to solve while learning something new.! You'll be able to learn React Native AND help a lot of people. Wouldn't that be fun?
 
 ## Licensing
 This application is licensed under the MIT license
