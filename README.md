@@ -34,9 +34,7 @@ Fork, take up an issue, and then work on it. Then create pull requests. The usua
 Fantastic. You're exactly whom we're looking for! Me, the README writer event don't know the language. Isn't it great? You now have a real world problem to solve while learning something new.! You'll be able to learn React Native AND help a lot of people. Wouldn't that be fun?
 
 ## Licensing
-The licencing of this app is yet to be decided. But one thing is clear. It will go under the "Don't be evil" tagline. We'll be fair with the links in the categories, and then make this code open to anyone who wants the code. Open source, no questions asked.
-
-No company will own the app we build here. Althogh people could copy this and make their own apps. 
+This application is licensed under the MIT license
 
 Lets work together and make this possible.
 
