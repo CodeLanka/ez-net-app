@@ -1,4 +1,6 @@
-# ez-net-app
+# ez-net-app [![Build Status](https://travis-ci.org/CodeLanka/ez-net-app.svg?branch=master)](https://travis-ci.org/CodeLanka/ez-net-app)
+
+
 
 ## Overview
 EZ Net is an application developed for rural internet users which are not tech savy and shows interest in the internet and the resources it has.
