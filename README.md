@@ -35,6 +35,14 @@ Fork, take up an issue, and then work on it. Then create pull requests. The usua
 ## Uh, wait, this is in React Native! I don't know React Native. (Can't we just use Java and Swift?)
 Fantastic. You're exactly whom we're looking for! Me, the README writer even don't know the language. Isn't it great? You now have a real world problem to solve while learning something new.! You'll be able to learn React Native AND help a lot of people. Wouldn't that be fun?
 
+## How to start
+
+This is a React Native app, thus you have to have tools neede for React and React native like NodeJS, NPM, ( Yarn ), etc. Android tools if you are building on Android. ( And iOS tools if you are building on iOS. ) 
+
+Issue a `yarn` or `npm install` to get all the dependencies. Run with `yarn start` or `npm start`. You should have an Android virtual Device running.
+
+Look at `App.js` as a starting point. ;) 
+
 ## Licensing
 This application is licensed under the MIT license
 
