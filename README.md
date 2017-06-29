@@ -15,6 +15,13 @@ When the user clicks one category, webpages related to that category open up. Th
 
 When the user clicks the logo, the link should open up in the default browser. We need not complicate this app with browser capabilities.
 
+### Design examples
+You may use the following as a guideline to build
+
+<img src="https://storage.googleapis.com/project-7716491087544309745.appspot.com/Categories.png" width="300px">
+<img src="https://storage.googleapis.com/project-7716491087544309745.appspot.com/Subcategories.png" width="300px">
+
+
 ## Where did this start?
 This project is done to assist a sustainability project done by Dialog Axiata to help out bridge the gender gap in internet users in Sri Lanka.
 The need for this app arose when sustainability initiatives saw that most users like to browse the net, but are reluctant or is uneasy to type using the on screen soft keyboard of the mobile phone. 
