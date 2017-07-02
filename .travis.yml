@@ -34,6 +34,8 @@ matrix:
         - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
         - travis_retry sudo apt-get update -qq
         - travis_retry sudo apt-get install -y -qq yarn
+        - openssl aes-256-cbc -K $encrypted_26b4962af0e7_key -iv $encrypted_26b4962af0e7_iv
+          -in debug.keystore.enc -out debug.keystore -d
       install:
         - yarn
       android:
@@ -44,9 +46,7 @@ matrix:
           - extra-google-google_play_services
           - extra-google-m2repository
           - addon-google_apis-google-16
-      before_install:
-      - openssl aes-256-cbc -K $encrypted_26b4962af0e7_key -iv $encrypted_26b4962af0e7_iv
-        -in debug.keystore.enc -out debug.keystore -d
+
       script:
         - cd android && ./gradlew assembleDebug && ./gradlew assembleRelease
       before_deploy:
