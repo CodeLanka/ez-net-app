@@ -13,5 +13,12 @@ import {
 } from 'react-native';
 
 import ReactNativeProject from './App';
+import DetailScreen from './DetailScreen';
+import { StackNavigator } from 'react-navigation';
 
-AppRegistry.registerComponent('ReactNativeProject', () => ReactNativeProject);
+const SimpleApp = StackNavigator({
+  Home: { screen: ReactNativeProject },
+  Detail: { screen: DetailScreen },
+});
+
+AppRegistry.registerComponent('ReactNativeProject', () => SimpleApp);

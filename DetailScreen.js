@@ -6,63 +6,63 @@ import {
   TextInput,
   View,
   TouchableOpacity,
-  TouchableHighlight
+  WebView,
+  Linking,
+  TouchableHighlight,
+  Alert
 } from 'react-native';
 import { Container, Header, Title, Content, Card, CardItem, Left, Right, Thumbnail, Body, Text, Button, Icon } from 'native-base';
 import MainDrawer from './components/Drawer';
 import ResponsiveImage from 'react-native-responsive-image';
 import { StackNavigator } from 'react-navigation';
 
-export default class ReactNativeProject extends Component {
+export default class DetailScreen extends Component {
 
     state = {
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
     }
+    
+    // Function onButtonPress
+    _onPressButton(url){
+            //Alert.alert("Lol");
+            const uri = url;
+            Linking.openURL(uri).catch(err => console.error('An error occurred', err));
+        }
 
-    static navigationOptions = {
-        title: 'අන්තර්ජාල නැබ',
-    };
+    static navigationOptions = ({ navigation }) => ({
+        title: `${navigation.state.params.title}`,
+    });
 
     render() {
-
+        
         const {flexDirection, alignItems, justifyContent} = this.state
         const layoutStyle = {flexDirection, justifyContent, alignItems}
-        const {navigate} = this.props.navigation;
+        const { params } = this.props.navigation.state;
+        
         return (
           <Container>
-              {/*<Header>
-                  <Left>
-                      <Button transparent onPress={()=> console.log(MainDrawer)}>
-                          <Icon name='menu' />
-                      </Button>
-                  </Left>
-                  <Body>
-                      <Title>අන්තර්ජාල නැබ</Title>
-                  </Body>
-                  <Right />
-              </Header>*/}
 
               <Content>
-
                 <View style={[styles.layout, layoutStyle]}>
-                    <TouchableHighlight onPress={() => navigate('Detail', { title: 'පුවත් පත්' })}>
+                    <TouchableHighlight onPress={() => this._onPressButton('http://www.divaina.com')}>
                         <View style={styles.box} >
-                            <ResponsiveImage source={require('./img/news-papers.png')} initWidth="138" initHeight="138"/>
+                            <ResponsiveImage source={require('./img/divaina.png')} initWidth="138" initHeight="138"/>
                         </View>
                     </TouchableHighlight>
+                    
                     <View style={styles.box} >
-                        <ResponsiveImage source={require('./img/unknown.png')} initWidth="138" initHeight="138"/>
+                        <ResponsiveImage source={require('./img/lankadeepa.png')} initWidth="138" initHeight="138"/>
                     </View>
                 </View>
 
                 <View style={[styles.layout, layoutStyle]}>
                     <View style={styles.box} >
-                        <ResponsiveImage source={require('./img/unknown.png')} initWidth="138" initHeight="138"/>
+                        <ResponsiveImage source={require('./img/rivira.png')} initWidth="138" initHeight="138"/>
                     </View>
                     <View style={styles.box} >
-                        <ResponsiveImage source={require('./img/unknown.png')} initWidth="138" initHeight="138"/>
+                        <ResponsiveImage source={require('./img/derana.png')} initWidth="138" initHeight="138"/>
                     </View>
                 </View>
               </Content>
