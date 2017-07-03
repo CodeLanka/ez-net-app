@@ -37,7 +37,7 @@ matrix:
         - openssl aes-256-cbc -K $encrypted_26b4962af0e7_key -iv $encrypted_26b4962af0e7_iv
           -in debug.keystore.enc -out debug.keystore -d
       install:
-        - yarn
+        - npm install
       android:
         components:
           - build-tools-23.0.1
