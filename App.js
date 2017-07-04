@@ -23,18 +23,6 @@ export default class ReactNativeProject extends Component {
         const {navigate} = this.props.navigation;
         return (
           <Container>
-              {/*<Header>
-                  <Left>
-                      <Button transparent onPress={()=> console.log(MainDrawer)}>
-                          <Icon name='menu' />
-                      </Button>
-                  </Left>
-                  <Body>
-                      <Title>අන්තර්ජාල නැබ</Title>
-                  </Body>
-                  <Right />
-              </Header>*/}
-
               <Content>
 
                 <View style={[styles.layout]}>
