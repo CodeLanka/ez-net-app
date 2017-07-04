@@ -20,9 +20,6 @@ export default class ReactNativeProject extends Component {
     };
 
     render() {
-
-        const {flexDirection, alignItems, justifyContent} = this.state
-        const layoutStyle = {flexDirection, justifyContent, alignItems}
         const {navigate} = this.props.navigation;
         return (
           <Container>
