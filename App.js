@@ -15,12 +15,6 @@ import { StackNavigator } from 'react-navigation';
 
 export default class ReactNativeProject extends Component {
 
-    state = {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-    }
-
     static navigationOptions = {
         title: 'අන්තර්ජාල නැබ',
     };
@@ -46,7 +40,7 @@ export default class ReactNativeProject extends Component {
 
               <Content>
 
-                <View style={[styles.layout, layoutStyle]}>
+                <View style={[styles.layout]}>
                     <TouchableHighlight onPress={() => navigate('Detail', { title: 'පුවත් පත්' })}>
                         <View style={styles.box} >
                             <ResponsiveImage source={require('./img/news-papers.png')} initWidth="138" initHeight="138"/>
@@ -57,7 +51,7 @@ export default class ReactNativeProject extends Component {
                     </View>
                 </View>
 
-                <View style={[styles.layout, layoutStyle]}>
+                <View style={[styles.layout]}>
                     <View style={styles.box} >
                         <ResponsiveImage source={require('./img/unknown.png')} initWidth="138" initHeight="138"/>
                     </View>
@@ -80,6 +74,9 @@ const styles = StyleSheet.create({
   },
   layout: {
     flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   box: {
     padding: 20,
