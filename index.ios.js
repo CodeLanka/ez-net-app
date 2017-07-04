@@ -1,24 +1,7 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
-import React, { Component } from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
+  AppRegistry
 } from 'react-native';
 
-import ReactNativeProject from './App';
-import DetailScreen from './DetailScreen';
-import { StackNavigator } from 'react-navigation';
+import EZNetApp from './EZNetApp';
 
-const SimpleApp = StackNavigator({
-  Home: { screen: ReactNativeProject },
-  Detail: { screen: DetailScreen },
-});
-
-AppRegistry.registerComponent('ReactNativeProject', () => SimpleApp);
+AppRegistry.registerComponent('ReactNativeProject', () => EZNetApp);
