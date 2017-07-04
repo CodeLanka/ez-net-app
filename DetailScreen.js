@@ -17,12 +17,6 @@ import ResponsiveImage from 'react-native-responsive-image';
 import { StackNavigator } from 'react-navigation';
 
 export default class DetailScreen extends Component {
-
-    state = {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-    }
     
     // Function onButtonPress
     _onPressButton(url){
@@ -36,16 +30,13 @@ export default class DetailScreen extends Component {
     });
 
     render() {
-        
-        const {flexDirection, alignItems, justifyContent} = this.state
-        const layoutStyle = {flexDirection, justifyContent, alignItems}
         const { params } = this.props.navigation.state;
         
         return (
           <Container>
 
               <Content>
-                <View style={[styles.layout, layoutStyle]}>
+                <View style={[styles.layout]}>
                     <TouchableHighlight onPress={() => this._onPressButton('http://www.divaina.com')}>
                         <View style={styles.box} >
                             <ResponsiveImage source={require('./img/divaina.png')} initWidth="138" initHeight="138"/>
@@ -57,7 +48,7 @@ export default class DetailScreen extends Component {
                     </View>
                 </View>
 
-                <View style={[styles.layout, layoutStyle]}>
+                <View style={[styles.layout]}>
                     <View style={styles.box} >
                         <ResponsiveImage source={require('./img/rivira.png')} initWidth="138" initHeight="138"/>
                     </View>
@@ -80,6 +71,9 @@ const styles = StyleSheet.create({
   },
   layout: {
     flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   box: {
     padding: 20,
