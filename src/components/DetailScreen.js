@@ -1,0 +1,70 @@
+import React, { Component } from 'react';
+import { StyleSheet, View, Linking, TouchableHighlight } from 'react-native';
+import { Container, Content } from 'native-base';
+import ResponsiveImage from 'react-native-responsive-image';
+import PropTypes from 'prop-types';
+
+import * as staticImages from './../libs/static_images';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  },
+  layout: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  box: {
+    padding: 20,
+    backgroundColor: 'rgba(0,0,0,0.05)',
+    margin: 10
+  }
+});
+
+export default class DetailScreen extends Component {
+
+  // TODO: define the object as a shape (i.e. Proptypes.shape({ ... }))
+  static propTypes = {
+    navigation: PropTypes.object.isRequired,
+  };
+
+  // Function onButtonPress
+  _onPressButton(url) {
+    const uri = url;
+    Linking.openURL(uri).catch(err => console.error('An error occurred', err));
+  }
+
+  static navigationOptions = ({ navigation }) => ({ title: `${navigation.state.params.title}` });
+
+  render() {
+    return (
+      <Container>
+
+        <Content>
+          <View style={[styles.layout]}>
+            <TouchableHighlight onPress={() => this._onPressButton('http://www.divaina.com')}>
+              <View style={styles.box}>
+                <ResponsiveImage source={ staticImages.IMG_DIVAINA } initWidth="138" initHeight="138" />
+              </View>
+            </TouchableHighlight>
+
+            <View style={styles.box}>
+              <ResponsiveImage source={ staticImages.IMG_RIVIRA } initWidth="138" initHeight="138" />
+            </View>
+          </View>
+
+          <View style={[styles.layout]}>
+            <View style={styles.box}>
+              <ResponsiveImage source={ staticImages.IMG_LANKADEEPA } initWidth="138" initHeight="138" />
+            </View>
+            <View style={styles.box}>
+              <ResponsiveImage source={ staticImages.IMG_DERANA } initWidth="138" initHeight="138" />
+            </View>
+          </View>
+        </Content>
+      </Container>
+    );
+  }
+}
