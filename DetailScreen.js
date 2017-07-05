@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Linking, TouchableHighlight } from 'react-native';
 import { Container, Content } from 'native-base';
 import ResponsiveImage from 'react-native-responsive-image';
+import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
   container: {
@@ -21,6 +22,11 @@ const styles = StyleSheet.create({
 });
 
 export default class DetailScreen extends Component {
+
+  // TODO: define the object as a shape (i.e. Proptypes.shape({ ... }))
+  static propTypes = {
+    navigation: PropTypes.object.isRequired,
+  };
 
   // Function onButtonPress
   _onPressButton(url) {
