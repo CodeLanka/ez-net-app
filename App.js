@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   StyleSheet,
-  Image,
-  TextInput,
   View,
-  TouchableOpacity,
   TouchableHighlight
 } from 'react-native';
-import { Container, Header, Title, Content, Card, CardItem, Left, Right, Thumbnail, Body, Text, Button, Icon } from 'native-base';
-import MainDrawer from './components/Drawer';
+import { Container, Content } from 'native-base';
 import ResponsiveImage from 'react-native-responsive-image';
-import { StackNavigator } from 'react-navigation';
 
 export default class ReactNativeProject extends Component {
 
@@ -48,7 +42,7 @@ export default class ReactNativeProject extends Component {
           </Container>
         );
 
-        
+
     }
 }
 

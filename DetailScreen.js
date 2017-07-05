@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   StyleSheet,
-  Image,
-  TextInput,
   View,
-  TouchableOpacity,
-  WebView,
   Linking,
   TouchableHighlight,
-  Alert
 } from 'react-native';
-import { Container, Header, Title, Content, Card, CardItem, Left, Right, Thumbnail, Body, Text, Button, Icon } from 'native-base';
-import MainDrawer from './components/Drawer';
+import { Container, Content } from 'native-base';
 import ResponsiveImage from 'react-native-responsive-image';
-import { StackNavigator } from 'react-navigation';
 
 export default class DetailScreen extends Component {
-    
+
     // Function onButtonPress
     _onPressButton(url){
             //Alert.alert("Lol");
@@ -31,7 +23,7 @@ export default class DetailScreen extends Component {
 
     render() {
         const { params } = this.props.navigation.state;
-        
+
         return (
           <Container>
 
@@ -42,7 +34,7 @@ export default class DetailScreen extends Component {
                             <ResponsiveImage source={require('./img/divaina.png')} initWidth="138" initHeight="138"/>
                         </View>
                     </TouchableHighlight>
-                    
+
                     <View style={styles.box} >
                         <ResponsiveImage source={require('./img/lankadeepa.png')} initWidth="138" initHeight="138"/>
                     </View>
@@ -60,7 +52,7 @@ export default class DetailScreen extends Component {
           </Container>
         );
 
-        
+
     }
 }
 
