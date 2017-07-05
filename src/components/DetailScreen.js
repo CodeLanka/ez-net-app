@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, TouchableHighlight } from 'react-native';
+import { StyleSheet, View, Linking, TouchableHighlight } from 'react-native';
 import { Container, Content } from 'native-base';
 import ResponsiveImage from 'react-native-responsive-image';
 import PropTypes from 'prop-types';
+
+import * as staticImages from './../libs/static_images';
 
 const styles = StyleSheet.create({
   container: {
@@ -21,40 +23,44 @@ const styles = StyleSheet.create({
   }
 });
 
-export default class ReactNativeProject extends Component {
+export default class DetailScreen extends Component {
 
   // TODO: define the object as a shape (i.e. Proptypes.shape({ ... }))
   static propTypes = {
     navigation: PropTypes.object.isRequired,
   };
 
-  static navigationOptions = {
-    title: 'අන්තර්ජාල නැබ'
-  };
+  // Function onButtonPress
+  _onPressButton(url) {
+    const uri = url;
+    Linking.openURL(uri).catch(err => console.error('An error occurred', err));
+  }
+
+  static navigationOptions = ({ navigation }) => ({ title: `${navigation.state.params.title}` });
 
   render() {
-    const { navigate } = this.props.navigation;
     return (
       <Container>
-        <Content>
 
+        <Content>
           <View style={[styles.layout]}>
-            <TouchableHighlight onPress={() => navigate('Detail', { title: 'පුවත් පත්' })}>
+            <TouchableHighlight onPress={() => this._onPressButton('http://www.divaina.com')}>
               <View style={styles.box}>
-                <ResponsiveImage source={require('./img/news-papers.png')} initWidth="138" initHeight="138" />
+                <ResponsiveImage source={ staticImages.IMG_DIVAINA } initWidth="138" initHeight="138" />
               </View>
             </TouchableHighlight>
+
             <View style={styles.box}>
-              <ResponsiveImage source={require('./img/unknown.png')} initWidth="138" initHeight="138" />
+              <ResponsiveImage source={ staticImages.IMG_RIVIRA } initWidth="138" initHeight="138" />
             </View>
           </View>
 
           <View style={[styles.layout]}>
             <View style={styles.box}>
-              <ResponsiveImage source={require('./img/unknown.png')} initWidth="138" initHeight="138" />
+              <ResponsiveImage source={ staticImages.IMG_LANKADEEPA } initWidth="138" initHeight="138" />
             </View>
             <View style={styles.box}>
-              <ResponsiveImage source={require('./img/unknown.png')} initWidth="138" initHeight="138" />
+              <ResponsiveImage source={ staticImages.IMG_DERANA } initWidth="138" initHeight="138" />
             </View>
           </View>
         </Content>

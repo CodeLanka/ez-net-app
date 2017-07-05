@@ -2,6 +2,6 @@ import {
   AppRegistry
 } from 'react-native';
 
-import EZNetApp from './EZNetApp';
+import EZNetApp from './src/EZNetApp';
 
 AppRegistry.registerComponent('ReactNativeProject', () => EZNetApp);

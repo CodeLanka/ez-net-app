@@ -1,7 +1,7 @@
 import { StackNavigator } from 'react-navigation';
 
-import ReactNativeProject from './App';
-import DetailScreen from './DetailScreen';
+import ReactNativeProject from './components/App';
+import DetailScreen from './components/DetailScreen';
 
 
 const EZNetApp = StackNavigator({
