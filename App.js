@@ -27,39 +27,36 @@ const styles = StyleSheet.create({
 
 export default class ReactNativeProject extends Component {
 
-    static navigationOptions = {
-        title: 'අන්තර්ජාල නැබ',
-    };
+  static navigationOptions = {
+    title: 'අන්තර්ජාල නැබ',
+  };
 
-    render() {
-        const {navigate} = this.props.navigation;
-        return (
-          <Container>
-              <Content>
+  render() {
+    const {navigate} = this.props.navigation;
 
-                <View style={[styles.layout]}>
-                    <TouchableHighlight onPress={() => navigate('Detail', { title: 'පුවත් පත්' })}>
-                        <View style={styles.box} >
-                            <ResponsiveImage source={require('./img/news-papers.png')} initWidth="138" initHeight="138"/>
-                        </View>
-                    </TouchableHighlight>
-                    <View style={styles.box} >
-                        <ResponsiveImage source={require('./img/unknown.png')} initWidth="138" initHeight="138"/>
-                    </View>
-                </View>
-
-                <View style={[styles.layout]}>
-                    <View style={styles.box} >
-                        <ResponsiveImage source={require('./img/unknown.png')} initWidth="138" initHeight="138"/>
-                    </View>
-                    <View style={styles.box} >
-                        <ResponsiveImage source={require('./img/unknown.png')} initWidth="138" initHeight="138"/>
-                    </View>
-                </View>
-              </Content>
-          </Container>
-        );
-
-
-    }
+    return (
+      <Container>
+        <Content>
+          <View style={[styles.layout]}>
+            <TouchableHighlight onPress={() => navigate('Detail', { title: 'පුවත් පත්' })}>
+              <View style={styles.box} >
+                <ResponsiveImage source={require('./img/news-papers.png')} initWidth="138" initHeight="138" />
+              </View>
+            </TouchableHighlight>
+            <View style={styles.box} >
+              <ResponsiveImage source={require('./img/unknown.png')} initWidth="138" initHeight="138" />
+            </View>
+          </View>
+          <View style={[styles.layout]}>
+            <View style={styles.box} >
+              <ResponsiveImage source={require('./img/unknown.png')} initWidth="138" initHeight="138" />
+            </View>
+            <View style={styles.box} >
+              <ResponsiveImage source={require('./img/unknown.png')} initWidth="138" initHeight="138" />
+            </View>
+          </View>
+        </Content>
+      </Container>
+    );
+  }
 }
