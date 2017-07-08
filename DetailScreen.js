@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 import { Container, Content } from 'native-base';
 import ResponsiveImage from 'react-native-responsive-image';
+import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,6 +27,10 @@ const styles = StyleSheet.create({
 
 export default class DetailScreen extends Component {
 
+  static propTypes = {
+    navigation: PropTypes.object.isRequired,
+  };
+
   // Function onButtonPress
   _onPressButton(url) {
     const uri = url;
@@ -37,8 +42,6 @@ export default class DetailScreen extends Component {
   });
 
   render() {
-    const { params } = this.props.navigation.state;
-
     return (
       <Container>
         <Content>

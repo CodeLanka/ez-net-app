@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 import { Container, Content } from 'native-base';
 import ResponsiveImage from 'react-native-responsive-image';
+import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,13 +27,16 @@ const styles = StyleSheet.create({
 
 
 export default class ReactNativeProject extends Component {
+  static propTypes = {
+    navigation: PropTypes.object.isRequired,
+  };
 
   static navigationOptions = {
     title: 'අන්තර්ජාල නැබ',
   };
 
   render() {
-    const {navigate} = this.props.navigation;
+    const { navigate } = this.props.navigation;
 
     return (
       <Container>
