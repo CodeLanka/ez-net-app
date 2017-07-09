@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  View,
-  TouchableHighlight,
+  Linking,
 } from 'react-native';
 import { Container, Content } from 'native-base';
-import ResponsiveImage from 'react-native-responsive-image';
 import PropTypes from 'prop-types';
+
+import TwoColumnView from './src/components/common/TwoColumnView';
+import BoxItem from './src/components/common/BoxItem';
 
 const styles = StyleSheet.create({
   container: {
@@ -31,38 +32,31 @@ export default class DetailScreen extends Component {
     navigation: PropTypes.object.isRequired,
   };
 
-  // Function onButtonPress
-  _onPressButton(url) {
-    const uri = url;
-    Linking.openURL(uri).catch(err => console.error('An error occurred', err));
-  }
-
   static navigationOptions = ({ navigation }) => ({
     title: `${navigation.state.params.title}`,
   });
+
+  renderDetails() {
+    const { items } = this.props.navigation.state.params;
+    const details = items.map(item => (
+      <BoxItem
+        key={item.id}
+        onPress={() => Linking.openURL(item.url)}
+        {...item}
+      />
+    ));
+    return (
+      <TwoColumnView>
+        {details}
+      </TwoColumnView>
+    );
+  }
 
   render() {
     return (
       <Container>
         <Content>
-          <View style={[styles.layout]}>
-            <TouchableHighlight onPress={() => this._onPressButton('http://www.divaina.com')}>
-              <View style={styles.box} >
-                <ResponsiveImage source={require('./img/divaina.png')} initWidth="138" initHeight="138" />
-              </View>
-            </TouchableHighlight>
-            <View style={styles.box} >
-              <ResponsiveImage source={require('./img/lankadeepa.png')} initWidth="138" initHeight="138" />
-            </View>
-          </View>
-          <View style={[styles.layout]}>
-            <View style={styles.box} >
-              <ResponsiveImage source={require('./img/rivira.png')} initWidth="138" initHeight="138" />
-            </View>
-            <View style={styles.box} >
-              <ResponsiveImage source={require('./img/derana.png')} initWidth="138" initHeight="138"/>
-            </View>
-          </View>
+          {this.renderDetails()}
         </Content>
       </Container>
     );
