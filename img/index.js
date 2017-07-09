@@ -1,3 +1,5 @@
+export const UNKNOWN = require('./unknown.png');
+
 export const CATEGORY_NEWSPAPERS = require('./news-papers.png');
 
 export const NEWSPAPERS_DIVAINA = require('./divaina.png');
