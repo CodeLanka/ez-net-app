@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "502584752547",
+    "firebase_url": "https://project-7593821828655173684.firebaseio.com",
+    "project_id": "project-7593821828655173684",
+    "storage_bucket": "project-7593821828655173684.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502584752547:android:e3d7a6ebd70b1482",
+        "android_client_info": {
+          "package_name": "org.gdgsrilanka.codelanka.eznet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502584752547-ofmc6qbtfmbvsthbn5pj8ih3kg3ddsrd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.gdgsrilanka.codelanka.eznet",
+            "certificate_hash": "031b3fda8372c21778b1bf9e5f12974d7dc95fd0"
+          }
+        },
+        {
+          "client_id": "502584752547-oq47kki31psm060pn8r7fbs87a2n7jef.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXV-ym30hM8mMLzhBOc6JudoOjdqhUPJ4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "502584752547-oq47kki31psm060pn8r7fbs87a2n7jef.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
