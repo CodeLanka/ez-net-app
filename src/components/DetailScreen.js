@@ -6,8 +6,8 @@ import {
 import { Container, Content } from 'native-base';
 import PropTypes from 'prop-types';
 
-import TwoColumnView from './src/components/common/TwoColumnView';
-import BoxItem from './src/components/common/BoxItem';
+import TwoColumnView from './common/TwoColumnView';
+import BoxItem from './common/BoxItem';
 
 const styles = StyleSheet.create({
   container: {

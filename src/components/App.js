@@ -5,11 +5,12 @@ import {
 } from 'react-native';
 import { Container, Content } from 'native-base';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import TwoColumnView from './src/components/common/TwoColumnView';
-import BoxItem from './src/components/common/BoxItem';
+import TwoColumnView from './common/TwoColumnView';
+import BoxItem from './common/BoxItem';
 
-import { categories } from './src/api/dummy_api';
+import * as actions from './../actions';
 
 const styles = StyleSheet.create({
   container: {
@@ -17,8 +18,10 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class ReactNativeProject extends Component {
+class Categories extends Component {
   static propTypes = {
+    actionFetchData: PropTypes.func.isRequired,
+    categoryData: PropTypes.array.isRequired,
     navigation: PropTypes.object.isRequired,
   };
 
@@ -26,23 +29,14 @@ export default class ReactNativeProject extends Component {
     title: 'අන්තර්ජාල නැබ',
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      categories: [],
-    };
-  }
-
   componentWillMount() {
-    this.setState({
-      categories,
-    });
+    this.props.actionFetchData();
   }
 
   renderCategories() {
     const { navigate } = this.props.navigation;
 
-    const nodes = categories.map(category => (
+    const nodes = this.props.categoryData.map(category => (
       <BoxItem
         key={category.id}
         onPress={() => navigate('Detail', { title: category.title, items: category.items })}
@@ -69,3 +63,9 @@ export default class ReactNativeProject extends Component {
     );
   }
 }
+
+const mapStateToProps = ({ data }) => ({
+  categoryData: data,
+});
+
+export default connect(mapStateToProps, actions)(Categories);
