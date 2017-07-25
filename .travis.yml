@@ -40,7 +40,9 @@ matrix:
         - yarn
       android:
         components:
+          - tools
           - build-tools-23.0.1
+          - build-tools-25.0.2
           - android-23
           - android-25
           - extra-android-m2repository
