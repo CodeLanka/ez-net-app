@@ -1,7 +1,7 @@
 import {
-  AppRegistry
+    AppRegistry,
 } from 'react-native';
 
-import EZNetApp from './EZNetApp';
+import Root from './src';
 
-AppRegistry.registerComponent('EZNet', () => EZNetApp);
+AppRegistry.registerComponent('Root', () => Root);
