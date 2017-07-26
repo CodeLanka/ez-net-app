@@ -1,4 +1,4 @@
-package com.reactnativeproject;
+package org.gdgsrilanka.codelanka.eznet;
 
 import android.app.Application;
 import android.util.Log;
@@ -10,11 +10,10 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
-
-import io.invertase.firebase.RNFirebasePackage;
-
 import java.util.Arrays;
 import java.util.List;
+
+import io.invertase.firebase.RNFirebasePackage;
 
 public class MainApplication extends Application implements ReactApplication {
 

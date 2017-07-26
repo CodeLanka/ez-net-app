@@ -4,4 +4,4 @@ import {
 
 import Root from './src';
 
-AppRegistry.registerComponent('ReactNativeProject', () => Root);
+AppRegistry.registerComponent('Root', () => Root);
