@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9b8f07b92ceb4e9fa9cd17f2226a0f4a)](https://www.codacy.com/app/agentmilindu/ez-net-app?utm_source=github.com&utm_medium=referral&utm_content=CodeLanka/ez-net-app&utm_campaign=badger)
 # ez-net-app [![Build Status](https://travis-ci.org/CodeLanka/ez-net-app.svg?branch=master)](https://travis-ci.org/CodeLanka/ez-net-app)
 
 
