@@ -4,4 +4,4 @@ import {
 
 import Root from './src';
 
-AppRegistry.registerComponent('EZNetApp', () => Root);
+AppRegistry.registerComponent('EZNet', () => Root);
