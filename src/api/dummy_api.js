@@ -60,7 +60,7 @@ export const categories = [
         thumbnail: 'SEWING_BLOUSES',
         url: 'https://www.youtube.com/results?search_query=saree+blouse+blocks',
       },
-       {
+      {
         id: '3_2',
         title: 'ගවුම් මහන්න',
         thumbnail: 'SEWING_GOWNS',
