@@ -36,15 +36,18 @@ class Categories extends Component {
   renderCategories() {
     const { navigate } = this.props.navigation;
 
-    const nodes = this.props.categoryData.map(category => (
-      <BoxItem
-        key={category.id}
-        onPress={() => navigate('Detail', { title: category.title, items: category.items })}
-        {...category}
-      />
-    ));
+    let nodes = null;
+    if (this.props.categoryData.length !== 0) {
+      nodes = this.props.categoryData.map(category => (
+        <BoxItem
+          key={category.id}
+          onPress={() => navigate('Detail', { title: category.title, items: category.items })}
+          {...category}
+        />
+      ));
+    }
 
-    return (
+    return nodes === null ? null : (
       <TwoColumnView>
         {nodes}
       </TwoColumnView>
