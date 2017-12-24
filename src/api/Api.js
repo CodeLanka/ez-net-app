@@ -49,7 +49,7 @@ class Api {
             }
           }));
       })
-      .catch(err => console.error(err));
+      .catch(err => reject(err));
   });
 
   /**
@@ -57,7 +57,7 @@ class Api {
    * @param category
    * @returns {Promise}
    */
-  static getSites = (category) => Firebase.database().ref(`/Sites/${category}`).once('value')
+  static getSites = category => Firebase.database().ref(`/Sites/${category}`).once('value')
     .then(snapshot => snapshot.val());
 
   /**
@@ -66,6 +66,6 @@ class Api {
    */
   static getCategories = () => Firebase.database().ref('/Categories').once('value')
     .then(snapshot => snapshot.val());
-};
+}
 
 export default Api;
