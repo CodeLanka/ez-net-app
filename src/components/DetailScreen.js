@@ -1,15 +1,13 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   StyleSheet,
   Linking,
 } from 'react-native';
-import {Container, Content} from 'native-base';
+import { Container, Content } from 'native-base';
 import PropTypes from 'prop-types';
 
 import TwoColumnView from './common/TwoColumnView';
 import BoxItem from './common/BoxItem';
-
-import Api from '../api/Api';
 
 const styles = StyleSheet.create({
   container: {
@@ -34,12 +32,12 @@ export default class DetailScreen extends Component {
     navigation: PropTypes.object.isRequired,
   };
 
-  static navigationOptions = ({navigation}) => ({
+  static navigationOptions = ({ navigation }) => ({
     title: `${navigation.state.params.title}`,
   });
 
   renderDetails() {
-    const {items} = this.props.navigation.state.params;
+    const { items } = this.props.navigation.state.params;
     const details = items.map(item => (
       <BoxItem
         key={item.id}
