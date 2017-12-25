@@ -25,11 +25,13 @@ class Api {
     const finalArr = [];
     categories()
       .then((categoriesData) => {
-        Object.keys(categoriesData).map((key) => {
-          const title = key;
-          const newTitle = title.charAt(0).toUpperCase() + title.slice(1);
-          return finalArr.push({ id: categoriesData[key], title: newTitle, thumbnail: undefined });
-          // we have to add Thumbnail (both - to Firebase and app)
+        Object.keys(categoriesData).map((key, index) => {
+          const categoryObject = categoriesData[key];
+          return finalArr.push({
+            id: index + 1,
+            title: categoryObject.title,
+            thumbnail: categoryObject.thumbnail,
+          });
         });
         return finalArr;
       })
@@ -37,11 +39,11 @@ class Api {
         const newArray = [];
         nextData.map((key, index) => sites(key.title)
           .then((siteData) => {
-            const itemsArray = []; // helper Array to store all formatted items
+            const itemsArray = [];
             Object.keys(siteData).map((key1, index1) => itemsArray.push({
               id: `${finalArr[index].id}_${index1}`,
               title: siteData[key1].title,
-              url: `http://${siteData[key1].url}`, // for now it will produce bad URL for links starting with http:// or https:// [needs to be changed in database]
+              url: siteData[key1].url,
               thumbnail: siteData[key1].thumbnail,
             }));
             newArray.push({ ...finalArr[index], items: itemsArray });
