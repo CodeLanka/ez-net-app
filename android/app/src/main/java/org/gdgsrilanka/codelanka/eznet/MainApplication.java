@@ -14,6 +14,12 @@ import java.util.Arrays;
 import java.util.List;
 
 import io.invertase.firebase.RNFirebasePackage;
+import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
+import io.invertase.firebase.crash.RNFirebaseCrashPackage;
+import io.invertase.firebase.perf.RNFirebasePerformancePackage;
+import io.invertase.firebase.database.RNFirebaseDatabasePackage;
+
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -28,6 +34,10 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           new RNFirebasePackage(),
+          new RNFirebaseAnalyticsPackage(),
+          new RNFirebaseCrashPackage(),
+          new RNFirebasePerformancePackage(),
+          new RNFirebaseDatabasePackage(),
             new VectorIconsPackage()
       );
     }
@@ -42,5 +52,6 @@ public class MainApplication extends Application implements ReactApplication {
   public void onCreate() {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
+    FirebaseDatabase.getInstance().setPersistenceEnabled(true);
   }
 }

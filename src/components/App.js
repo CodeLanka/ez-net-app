@@ -36,7 +36,8 @@ class Categories extends Component {
   renderCategories() {
     const { navigate } = this.props.navigation;
 
-    const nodes = this.props.categoryData.map(category => (
+    let nodes = null;
+    nodes = this.props.categoryData.map(category => (
       <BoxItem
         key={category.id}
         onPress={() => navigate('Detail', { title: category.title, items: category.items })}
@@ -44,7 +45,7 @@ class Categories extends Component {
       />
     ));
 
-    return (
+    return nodes === null ? null : (
       <TwoColumnView>
         {nodes}
       </TwoColumnView>
