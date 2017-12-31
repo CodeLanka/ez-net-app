@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import { FETCH_DATA } from './types';
 
 import Api from '../api/Api';
