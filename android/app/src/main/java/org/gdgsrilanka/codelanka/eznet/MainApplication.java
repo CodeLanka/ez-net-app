@@ -18,6 +18,9 @@ import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
 import io.invertase.firebase.crash.RNFirebaseCrashPackage;
 import io.invertase.firebase.perf.RNFirebasePerformancePackage;
 import io.invertase.firebase.database.RNFirebaseDatabasePackage;
+import io.invertase.firebase.storage.RNFirebaseStoragePackage;
+
+import com.RNFetchBlob.RNFetchBlobPackage;
 
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -38,6 +41,8 @@ public class MainApplication extends Application implements ReactApplication {
           new RNFirebaseCrashPackage(),
           new RNFirebasePerformancePackage(),
           new RNFirebaseDatabasePackage(),
+          new RNFirebaseStoragePackage(),
+          new RNFetchBlobPackage(),
             new VectorIconsPackage()
       );
     }
