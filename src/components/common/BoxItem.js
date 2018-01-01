@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, TouchableHighlight, View } from 'react-native';
+import { StyleSheet, TouchableHighlight, View, Platform } from 'react-native';
 import ResponsiveImage from 'react-native-responsive-image';
 
-import * as staticImages from './../../../img';
+import { UNKNOWN } from '../../../img/index';
 
 const styles = StyleSheet.create({
   box: {
@@ -26,12 +26,15 @@ class Item extends Component {
 
   render() {
     const { thumbnail, onPress } = this.props;
-
+    let thumbUri = UNKNOWN;
+    if (thumbnail !== null) {
+      thumbUri = { uri: Platform.OS === 'android' ? `file://${thumbnail}` : thumbnail };
+    }
     return (
       <TouchableHighlight onPress={onPress} >
         <View style={styles.box} >
           <ResponsiveImage
-            source={staticImages[thumbnail]}
+            source={thumbUri}
             initWidth="138"
             initHeight="138"
           />
