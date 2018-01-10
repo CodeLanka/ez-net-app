@@ -1,7 +1,7 @@
 import { FETCHED_DATA, START_FETCHING } from './../actions/types';
 
 const InitialState = {
-  isFetching: true,
+  isFetching: false,
   categories: [],
 };
 
