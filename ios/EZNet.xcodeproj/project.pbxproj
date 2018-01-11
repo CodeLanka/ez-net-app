@@ -37,6 +37,7 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		1A783CBED7964A1B943028BB /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA4C8771327D4F309CF96B46 /* Entypo.ttf */; };
 		15E39152B359427283F1C3DA /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39DA23C7AA9D42299B118FF6 /* EvilIcons.ttf */; };
+		AA38DD42A61547279DB2065B /* libRNSpinkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9C33604EAF4733B1678344 /* libRNSpinkit.a */; };
 		1914C80F342446179522A19D /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DB763D275554B5D804284C2 /* FontAwesome.ttf */; };
 		930240A7ABC14E2B9F6B7070 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20C2A7EFCCA94B809F9C67C1 /* Foundation.ttf */; };
 		6E936BD77A66421CA1711802 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9B8C594A62A42919ABAC0BB /* Ionicons.ttf */; };
