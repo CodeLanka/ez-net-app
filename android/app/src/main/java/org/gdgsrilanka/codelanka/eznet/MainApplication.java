@@ -35,7 +35,8 @@ public class MainApplication extends Application implements ReactApplication {
           new RNFirebaseAnalyticsPackage(),
           new RNFirebaseCrashPackage(),
           new RNFirebasePerformancePackage(),
-            new VectorIconsPackage()
+          new VectorIconsPackage(),
+          new RNSpinkitPackage()        
       );
     }
   };
