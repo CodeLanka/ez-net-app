@@ -1,8 +1,14 @@
-import { FETCH_DATA } from './types';
+import { FETCHED_DATA, START_FETCHING } from './types';
 
-import { categories as data } from './../api/dummy_api';
+import Api from '../api/Api';
 
-export const actionFetchData = () => ({
-  type: FETCH_DATA,
-  payload: data,
-});
+export const actionFetchData = () => (dispatch) => {
+  dispatch({ type: START_FETCHING });
+  Api.getCombinedData(Api.getCategories, Api.getSites, Api.getThumbnail)
+    .then((data) => {
+      dispatch({
+        type: FETCHED_DATA,
+        payload: data,
+      });
+    });
+};
