@@ -8,9 +8,9 @@ const InitialState = {
 export default (state = InitialState, action) => {
   switch (action.type) {
     case FETCHED_DATA:
-      return {...state,categories: action.payload, isFetching: false }
+      return { ...state, categories: action.payload, isFetching: false };
     case START_FETCHING:
-      return { ...state, categories: [], isFetching: true }
+      return { ...state, categories: [], isFetching: true };
     default:
       return state;
   }
