@@ -13,7 +13,7 @@ export default (state = InitialState, action) => {
         isFetching: false,
       });
     case START_FETCHING:
-      return { ...state, categories: [], isFeching: true } 
+      return { ...state, categories: [], isFeching: true }
     default:
       return state;
   }
