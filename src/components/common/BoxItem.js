@@ -21,12 +21,11 @@ class Item extends Component {
                     : thumbnail
             };
         }
-        console.log(thumbUri);
         return (
             <TouchableHighlight onPress={onPress}>
                 <View style={styles.box}>
                     <Image source={thumbUri}
-                        // style={{width:"138",height:"138"}}
+                        style={{width:138,height:138}}
                     />
                     {/* <ResponsiveImage
                         source={thumbUri}
