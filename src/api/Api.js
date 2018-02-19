@@ -105,7 +105,7 @@ class Api {
                       arrToReturn[index].items.push({
                         ...valueItems,
                         thumbnail: image,
-                        key: index,
+                        key: iterationNo,
                       });
                       if (iterationNo === data.length) {
                         resolveItems(arrToReturn);
@@ -116,7 +116,7 @@ class Api {
                   arrToReturn[index].items.push({
                     ...valueItems,
                     thumbnail: null,
-                    key: index,
+                    key: iterationNo,
                   });
                   if (iterationNo === data.length) {
                     resolveItems(arrToReturn);

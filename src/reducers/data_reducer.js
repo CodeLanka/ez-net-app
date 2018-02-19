@@ -8,15 +8,9 @@ const InitialState = {
 export default (state = InitialState, action) => {
   switch (action.type) {
     case FETCHED_DATA:
-      return Object.assign({}, state, {
-        categories: action.payload,
-        isFetching: false,
-      });
+      return { ...state, categories: action.payload, isFetching: false };
     case START_FETCHING:
-      return Object.assign({}, state, {
-        categories: [],
-        isFetching: true,
-      });
+      return { ...state, isFetching: true };
     default:
       return state;
   }
