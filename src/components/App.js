@@ -1,23 +1,14 @@
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
+import { StyleSheet, View} from 'react-native';
 import { Container, Content } from 'native-base';
 import { connect } from 'react-redux';
 
 import Loading from './Loading';
 import TwoColumnView from './common/TwoColumnView';
-import BoxItem from './common/BoxItem';
+import Item from './common/BoxItem';
 
 import * as actions from './../actions';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-  },
-});
+import styles from '../assets/styles/app';
 
 class Categories extends Component {
   static navigationOptions = {
@@ -34,7 +25,7 @@ class Categories extends Component {
     console.log(categories);
 
     const nodes = categories.map(category => (
-      <BoxItem
+      <Item
         key={category.id}
         onPress={() => navigate('Detail', { title: category.title, items: category.items })}
         {...category}

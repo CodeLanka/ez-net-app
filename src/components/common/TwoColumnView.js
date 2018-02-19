@@ -1,13 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-
-const styles = StyleSheet.create({
-  layout: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-});
+import styles from '../../assets/styles/twoColumnView';
 
 const TwoColumnView = (props) => {
   const { children } = props;
