@@ -3,7 +3,7 @@ import {
     StyleSheet,
     TouchableHighlight,
     View,
-    Platform, 
+    Platform,
     Image} from 'react-native';
 import ResponsiveImage from 'react-native-responsive-image';
 import styles from '../../assets/styles/boxItem';
@@ -15,7 +15,6 @@ class Item extends Component {
         const {thumbnail, onPress} = this.props;
         let thumbUri = UNKNOWN;
         if (thumbnail !== null) {
-            console.log(thumbnail);
             thumbUri = {
                 uri: Platform.OS === 'android'
                     ? `file://${thumbnail}`

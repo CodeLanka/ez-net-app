@@ -22,7 +22,6 @@ class Categories extends Component {
   renderCategories() {
     const { categories } = this.props;
     const { navigate } = this.props.navigation;
-    console.log(categories);
 
     const nodes = categories.map(category => (
       <Item

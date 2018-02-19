@@ -17,10 +17,9 @@ export default class DetailScreen extends Component {
 
   renderDetails() {
     const { items } = this.props.navigation.state.params;
-    console.log(items);
     const details = items.map(item => (
       <Item
-        key={item.id}
+        key={item.key}
         onPress={() => Linking.openURL(item.url)}
         {...item}
       />
