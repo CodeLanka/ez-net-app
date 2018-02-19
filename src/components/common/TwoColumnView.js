@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
   layout: {
@@ -39,10 +38,6 @@ const TwoColumnView = (props) => {
       </View>
     </View>
   );
-};
-
-TwoColumnView.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node).isRequired,
 };
 
 export default TwoColumnView;
