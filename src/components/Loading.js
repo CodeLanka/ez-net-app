@@ -1,5 +1,4 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
 
 import Spinner from 'react-native-spinkit';
 import { loaderStyle } from '../../assets/styles';
@@ -9,7 +8,7 @@ const Loading = () => (
     type={loaderStyle.TYPE}
     color={loaderStyle.COLOR}
     size={loaderStyle.SIZE}
-    style={loaderStyle.style.loader}
+    style={loaderStyle.styles.loader}
   />
 );
 

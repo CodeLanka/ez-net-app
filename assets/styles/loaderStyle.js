@@ -8,4 +8,4 @@ const styles = StyleSheet.create({
   loader: { marginTop: '50%' },
 });
 
-export { styles, TYPE, COLOR, SIZE };
+export default { styles, TYPE, COLOR, SIZE };
