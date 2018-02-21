@@ -97,7 +97,7 @@ class Api {
                 ...value,
                 items: [],
               });
-              value.items.map((valueItems) => {
+              value.items.map((valueItems, key) => {
                 if (valueItems.thumbnail) {
                   images(valueItems.thumbnail)
                     .then((image) => {
@@ -105,7 +105,7 @@ class Api {
                       arrToReturn[index].items.push({
                         ...valueItems,
                         thumbnail: image,
-                        key: iterationNo,
+                        key: key,
                       });
                       if (iterationNo === data.length) {
                         resolveItems(arrToReturn);
@@ -116,7 +116,7 @@ class Api {
                   arrToReturn[index].items.push({
                     ...valueItems,
                     thumbnail: null,
-                    key: iterationNo,
+                    key: key,
                   });
                   if (iterationNo === data.length) {
                     resolveItems(arrToReturn);

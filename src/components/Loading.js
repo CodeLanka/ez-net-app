@@ -2,21 +2,14 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 
 import Spinner from 'react-native-spinkit';
-
-const TYPE = 'FoldingCube';
-const COLOR = '#3F51B5';
-const SIZE = 100;
-
-const styles = StyleSheet.create({
-  loader: { marginTop: '50%' },
-});
+import { loaderStyle } from '../../assets/styles';
 
 const Loading = () => (
   <Spinner
-    type={TYPE}
-    color={COLOR}
-    size={SIZE}
-    style={styles.loader}
+    type={loaderStyle.TYPE}
+    color={loaderStyle.COLOR}
+    size={loaderStyle.SIZE}
+    style={loaderStyle.style.loader}
   />
 );
 

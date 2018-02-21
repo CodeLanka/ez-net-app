@@ -1,14 +1,7 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import PropTypes from 'prop-types';
+import { View } from 'react-native';
 
-const styles = StyleSheet.create({
-  layout: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-});
+import { twoColumnViewStyle } from '../../../assets/styles';
 
 const TwoColumnView = (props) => {
   const { children } = props;
@@ -30,7 +23,7 @@ const TwoColumnView = (props) => {
   });
 
   return (
-    <View style={styles.layout}>
+    <View style={twoColumnViewStyle.layout}>
       <View>
         {left}
       </View>
@@ -39,10 +32,6 @@ const TwoColumnView = (props) => {
       </View>
     </View>
   );
-};
-
-TwoColumnView.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node).isRequired,
 };
 
 export default TwoColumnView;
