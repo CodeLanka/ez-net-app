@@ -1,33 +1,16 @@
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
+import { View } from 'react-native';
 import { Container, Content } from 'native-base';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-
 import Loading from './Loading';
 import TwoColumnView from './common/TwoColumnView';
 import BoxItem from './common/BoxItem';
 
+import { appStyle } from '../../assets/styles';
+
 import * as actions from './../actions';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-  },
-});
-
 class Categories extends Component {
-  static propTypes = {
-    actionFetchData: PropTypes.func.isRequired,
-    categories: PropTypes.array.isRequired,
-    isFetching: PropTypes.bool.isRequired,
-    navigation: PropTypes.object.isRequired,
-  };
-
   static navigationOptions = {
     title: 'අන්තර්ජාල නැබ',
   };
@@ -60,7 +43,7 @@ class Categories extends Component {
     return (
       <Container>
         <Content>
-          <View style={styles.container}>
+          <View style={appStyle.container}>
             { isFetching ? <Loading /> : this.renderCategories() }
           </View>
         </Content>

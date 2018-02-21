@@ -1,43 +1,27 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { StyleSheet, TouchableHighlight, View, Platform } from 'react-native';
-import ResponsiveImage from 'react-native-responsive-image';
+import { TouchableHighlight, View, Platform, Image, Text } from 'react-native';
+import { UNKNOWN } from '../../../assets/images/index';
 
-import { UNKNOWN } from '../../../img/index';
-
-const styles = StyleSheet.create({
-  box: {
-    padding: 20,
-    backgroundColor: 'rgba(0,0,0,0.05)',
-    margin: 10,
-  },
-});
+import { boxItemStyle } from '../../../assets/styles';
 
 class Item extends Component {
-  static defaultProps = {
-    thumbnail: 'UNKNOWN',
-    onPress: () => {},
-  };
-
-  static propTypes = {
-    thumbnail: PropTypes.string,
-    onPress: PropTypes.func,
-  };
-
   render() {
-    const { thumbnail, onPress } = this.props;
+    const { thumbnail, onPress, title } = this.props;
     let thumbUri = UNKNOWN;
     if (thumbnail !== null) {
       thumbUri = { uri: Platform.OS === 'android' ? `file://${thumbnail}` : thumbnail };
     }
     return (
-      <TouchableHighlight onPress={onPress} >
-        <View style={styles.box} >
-          <ResponsiveImage
+      <TouchableHighlight onPress={onPress} underlayColor='rgba(0,0,0,0.12)'>
+        <View style={boxItemStyle.box}>
+          <Image
             source={thumbUri}
-            initWidth="138"
-            initHeight="138"
+            style={{
+              height: 135,
+              width: 135,
+            }}
           />
+          <Text style={boxItemStyle.title}>{title}</Text>
         </View>
       </TouchableHighlight>
     );
