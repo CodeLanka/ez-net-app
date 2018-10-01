@@ -1,4 +1,4 @@
-# EZNet App [![Build Status](https://travis-ci.org/CodeLanka/ez-net-app.svg?branch=master)](https://travis-ci.org/CodeLanka/ez-net-app) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9b8f07b92ceb4e9fa9cd17f2226a0f4a)](https://www.codacy.com/app/agentmilindu/ez-net-app?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=CodeLanka/ez-net-app&amp;utm_campaign=Badge_Grade)
+# EZNet App [![Build Status](https://travis-ci.org/CodeLanka/ez-net-app.svg?branch=master)](https://travis-ci.org/CodeLanka/ez-net-app) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9b8f07b92ceb4e9fa9cd17f2226a0f4a)](https://www.codacy.com/app/agentmilindu/ez-net-app?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=CodeLanka/ez-net-app&amp;utm_campaign=Badge_Grade) [![Open Source Helpers](https://www.codetriage.com/codelanka/ez-net-app/badges/users.svg)](https://www.codetriage.com/codelanka/ez-net-app)
 
 
 ![EZNet](https://github.com/CodeLanka/ez-net-app/blob/master/img/Banner.png)
