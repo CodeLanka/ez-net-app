@@ -64,6 +64,7 @@ matrix:
         file: $TRAVIS_BUILD_DIR/android/app/build/outputs/apk/app-debug-signed.apk
         on:
           repo: CodeLanka/ez-net-app
+          branch: master
           tags: true
     - language: objective-c
       os: osx
