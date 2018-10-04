@@ -61,7 +61,7 @@ matrix:
         provider: releases
         api_key:
           secure: 2fYSjSPMmTUDhcgd6w/nXVMtsp6O+GHb0gFjpTjPA33xodEYsNlEvmdk9fvUJakWi2z0VxBaGw1iHaYCQmzj8858caQVjlSpdTRUVw3d/CMw0O3kZWKD37GaX5ocY1LZ2QSJS1ePXitOZYkgqbfK104Tiuru1/SKKziLgM5OIHVQj4CGdlvqRr5rERU2Sy9yPi+XgrlnTgcNGIzZ+3In19jhaZzFLvVTQckk0R6oQaQQnt/GudEPdft2SNLQS0ecHuUj8n8dGb0TR2G9ej5gVq7aDo4oyn2k8FOKa86XwT6cGpjm3VdOb5rfvAVxglm4GqWWjxXkm8Wq69Awrhb6PDHGvq1H68ShvEudSPr1ABRj6grWsf8n5IxKQL4FG+pV2d3D6wtD/mnljguvCjw8Gb652VFwij/Vhm4z8W/VvviUXF+sWnivdEOgvUOG3XW9DZP84I1IWPLSfj2nVnmgVYJVIrCmcSWh2B2iednJeWP75mz5PyXfUp+Q9ECuu0C19oi7C2pTHTqq3GhXAhtZszmllW4cRftw7kUYsyzDzVutB8SVSkKqSCiO/NXIfvbaHQ1BHabzV5aAhD1n2fitB7UDROaXZSlAWzq2eSpbKzITHmkUateEgig89oDIE9NUJ/iITTtWzGjqTxwQkhpFWN6HUSIJleC0658kgI/izwI=
-        file: $TRAVIS_BUILD_DIR/android/app/build/outputs/apk/app-debug-signed.apk
+        file: $TRAVIS_BUILD_DIR/android/app/build/outputs/apk/app-debug-signed-$TRAVIS_TAG.apk
         on:
           repo: CodeLanka/ez-net-app
           branch: master
