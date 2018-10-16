@@ -83,3 +83,8 @@ matrix:
       script:
         - cd ios
         - xcodebuild -scheme ReactNativeProject -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
+        
+      notifications:
+         slack:
+           rooms:
+             - codelanka:t20DKGCWPBZybOLsuPcCARUI#travis-ci
