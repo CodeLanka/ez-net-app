@@ -3,6 +3,7 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
+import _ from 'lodash'
 import { Container, Content } from 'native-base';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -39,7 +40,7 @@ class Categories extends Component {
     const nodes = this.props.categoryData.map(category => (
       <BoxItem
         key={category.id}
-        onPress={() => navigate('Detail', { title: category.title, items: category.items })}
+        onPress={_.debounce(() => navigate('Detail', { title: category.title, items: category.items }), 750, { leading: true, trailing: false })}
         {...category}
       />
     ));
